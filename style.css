@@ -6,10 +6,6 @@ body {
 .menu__item {
   font-family: Roboto;
 }
-.logo,
-.main-content__title {
-  font-family: "PT Serif";
-}
 body,
  .menu__item,
  .header,
@@ -36,24 +32,63 @@ body,
 .logo, .menu {
   display: inline-block;
 }
-.logo {
-  margin-right: 63%;
-  padding: 40px 0;
-}
 .header {
   display: flex;
   ustify-content: space-between;
 }
 .logo {
-  padding: 40px 0;
+  padding: 40px 0 40px 40px;
+  font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
+  position: relative;
+}
+.logo__circle {
+  width: 28px;
+  height: 28px;
+  top: 40px;
+  left: 0;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+.logo__circle_color_dark-blue {
+  position: absolute;
+  background: #0056EC;
+}
+.logo__circle_color_blue {
+  position: absolute;
+  left: 8px;
+  top: 43%;
+  background: #C8DBFB;
 }
 .menu {
   display: flex;
   align-items: center;
 }
 .menu__item {
-  padding: 0 13px;
+  position: relative;
+  margin: 0 13px;
+  font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  margin-right: 26px;
 }
 .menu__item:last-child {
   padding-right: 0;
+}
+.menu__item:after {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #0056EC;
+  opacity: 0;
+  transition: opacity .5s, width .5s;
+}
+.menu__item:hover {
+  opacity: 0.5;
+}
+.menu__item:hover:after, .menu__item_active:after {
+  opacity: 1;
+  width: 100%;
 }
