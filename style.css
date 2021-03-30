@@ -1,3 +1,59 @@
-.main-content__title{
+body {
+  margin: 0;
+}
+.main-content__description,
+.main-content__button,
+.menu__item {
   font-family: Roboto;
+}
+.logo,
+.main-content__title {
+  font-family: "PT Serif";
+}
+body,
+ .menu__item,
+ .header,
+ .main-section,
+ .logo,
+ .menu,
+ .wrapper {
+  /* border: dashed 1px red; */
+}
+.header {
+   display: flex;
+   margin: auto;
+   width: 80%;
+   justify-content: space-between;
+}
+.main-section {
+  margin: auto;
+  width: 80%;
+}
+.wrapper {
+  margin: auto;
+  width: 80%;
+}
+.logo, .menu {
+  display: inline-block;
+}
+.logo {
+  margin-right: 63%;
+  padding: 40px 0;
+}
+.header {
+  display: flex;
+  ustify-content: space-between;
+}
+.logo {
+  padding: 40px 0;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu__item {
+  padding: 0 13px;
+}
+.menu__item:last-child {
+  padding-right: 0;
 }
